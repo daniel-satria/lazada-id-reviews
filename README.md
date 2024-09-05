@@ -1,11 +1,12 @@
-# **Machine Learning Project Template**
+# **LAZADA ID REVIEWS**
 
-![workflow status](https://github.com/rohwid/machine-learning-project-template/actions/workflows/builder.yml/badge.svg)
+![workflow status](https://github.com/daniel-satria/lazada-id-reviews/actions/workflows/builder.yml/badge.svg)
 
 Steps:
 + Select **Use this template** > **Create a new repository**. This menu is in the top right corner of this repository.
-+ Create and define your the project repository.
-+ Edit the [README.md](README.md) file's **workflow status** badge with the name of your repository.
++ Edit `setup.py` and define your project repository.
+    + Edit the [README.md](README.md) file's **workflow status** badge with the name of your repository.
+    + Renaming `src/MLProject` to your project.
 + Create virtual environment
 
     ```bash
