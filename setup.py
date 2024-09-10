@@ -6,7 +6,7 @@ with open("README.md", "r", encoding="utf-8") as f:
 __version__ = "0.0.1"
 
 REPO_NAME = "lazada-id-reviews"
-AUTHOR_USER_NAME = "Daniel"
+AUTHOR_USER_NAME = "daniel-satria"
 SRC_REPO = "LazadaIDReviews"
 AUTHOR_EMAIL = "danielsatria31@gmail.com"
 
