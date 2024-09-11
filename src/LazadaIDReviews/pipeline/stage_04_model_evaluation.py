@@ -1,3 +1,4 @@
+import os
 from LazadaIDReviews.config.configuration import ConfigurationManager
 from LazadaIDReviews.components.model_evaluation import TrainEvaluation
 from LazadaIDReviews import logger
@@ -9,13 +10,18 @@ class TrainEvaluationPipeline:
         pass
 
     def pipeline(self):
-        config = ConfigurationManager()
-        train_eval_config = config.get_train_eval_config()
-        train_eval = TrainEvaluation(config=train_eval_config)
-        train_eval.mlflow_log_train()
+        try:
+            config = ConfigurationManager()
+            eval_config = config.get_train_eval_config()
+            evaluation = TrainEvaluation(config=eval_config)
+            evaluation.mlflow_log_train()
+        except Exception as e:
+            logger.error(e)
+            raise e
 
 if __name__ == '__main__':
     try:
+        os.chdir("/home/ubuntu/learning/mlops/pacmann/lazada-id-reviews")
         logger.info(f"\n\n")
         logger.info(f">>>>>>> Stage {STAGE_NAME} Started <<<<<<<")
         
