@@ -22,15 +22,15 @@ stages:
       size: 3006906
     - path: artifacts/data-ingestion/reviews.csv
       hash: md5
-      md5: 0b7527695d02df59a42156279794e48f
-      size: 28744092
+      md5: 933e6b21120c964adffe9e90680985c4
+      size: 28743920
   preprocessing:
     cmd: python src/LazadaIDReviews/pipeline/stage_02_preprocessing.py
     deps:
     - path: artifacts/data-ingestion/reviews.csv
       hash: md5
-      md5: 0b7527695d02df59a42156279794e48f
-      size: 28744092
+      md5: 933e6b21120c964adffe9e90680985c4
+      size: 28743920
     - path: config/config.yaml
       hash: md5
       md5: 935b0b01d1155e089e4ce4ffe989b711
@@ -45,43 +45,43 @@ stages:
     outs:
     - path: artifacts/data/X_test.pkl
       hash: md5
-      md5: f1ee79c9376849bf9b678487bae3c750
-      size: 7839090
+      md5: 6293f173886dacd453f34b2dce567d8d
+      size: 7835819
     - path: artifacts/data/X_train.pkl
       hash: md5
-      md5: 4f54abb6106e2085d07cbdeffe1170d5
-      size: 2081198
+      md5: 25e327ec89bd2a9656895bd57e7defa5
+      size: 2085324
     - path: artifacts/data/y_test.pkl
       hash: md5
-      md5: 60b2285261bce04aa2e0d5459bf39f55
-      size: 2055597
+      md5: 96ea1100abdde4e539fa7e40538992d8
+      size: 2055573
     - path: artifacts/data/y_train.pkl
       hash: md5
-      md5: e51673fae902c4be81d85915f6815ac3
-      size: 665175
+      md5: 9d4d2f784ce43034953be0e53e36a848
+      size: 664455
     - path: artifacts/models/vectorizer.pkl
       hash: md5
-      md5: 1f08a86982eb593277c02032cc9f74a9
-      size: 387862
+      md5: 3a96d6137c63df6fa43372978cd1fa1a
+      size: 391214
     - path: artifacts/preprocessing/X_test_vec.pkl
       hash: md5
-      md5: 8b431e91e20b1fe8fec661e8e42ee58f
-      size: 12146763
+      md5: 3c1b02bdec5bc152a91f0f8f9182b083
+      size: 12138891
     - path: artifacts/preprocessing/X_train_vec.pkl
       hash: md5
-      md5: f81fa4b88d8ca33903ede519ea83cee4
-      size: 14880707
+      md5: c92648cee1ab24c27d498046dbeb0bbc
+      size: 14993987
   training:
     cmd: python src/LazadaIDReviews/pipeline/stage_03_train_model.py
     deps:
     - path: artifacts/data/y_train.pkl
       hash: md5
-      md5: e51673fae902c4be81d85915f6815ac3
-      size: 665175
+      md5: 9d4d2f784ce43034953be0e53e36a848
+      size: 664455
     - path: artifacts/preprocessing/X_train_vec.pkl
       hash: md5
-      md5: f81fa4b88d8ca33903ede519ea83cee4
-      size: 14880707
+      md5: c92648cee1ab24c27d498046dbeb0bbc
+      size: 14993987
     - path: config/config.yaml
       hash: md5
       md5: 935b0b01d1155e089e4ce4ffe989b711
@@ -98,31 +98,31 @@ stages:
     outs:
     - path: artifacts/models/logistic_regression.pkl
       hash: md5
-      md5: 5825dc5e0b231afed7f84980a35c935f
-      size: 541621
+      md5: f17d6e81064261542e8c6a9708a8b067
+      size: 546773
   evaluation:
     cmd: python src/LazadaIDReviews/pipeline/stage_04_model_evaluation.py
     deps:
     - path: artifacts/data/X_test.pkl
       hash: md5
-      md5: f1ee79c9376849bf9b678487bae3c750
-      size: 7839090
+      md5: 6293f173886dacd453f34b2dce567d8d
+      size: 7835819
     - path: artifacts/data/X_train.pkl
       hash: md5
-      md5: 4f54abb6106e2085d07cbdeffe1170d5
-      size: 2081198
+      md5: 25e327ec89bd2a9656895bd57e7defa5
+      size: 2085324
     - path: artifacts/data/y_train.pkl
       hash: md5
-      md5: e51673fae902c4be81d85915f6815ac3
-      size: 665175
+      md5: 9d4d2f784ce43034953be0e53e36a848
+      size: 664455
     - path: artifacts/models/logistic_regression.pkl
       hash: md5
-      md5: 5825dc5e0b231afed7f84980a35c935f
-      size: 541621
+      md5: f17d6e81064261542e8c6a9708a8b067
+      size: 546773
     - path: artifacts/preprocessing/X_train_vec.pkl
       hash: md5
-      md5: f81fa4b88d8ca33903ede519ea83cee4
-      size: 14880707
+      md5: c92648cee1ab24c27d498046dbeb0bbc
+      size: 14993987
     - path: config/config.yaml
       hash: md5
       md5: 935b0b01d1155e089e4ce4ffe989b711
@@ -134,5 +134,5 @@ stages:
     outs:
     - path: metrics/scores.json
       hash: md5
-      md5: 0c416a88cb04dbb5e8d4d694bdb5f99e
-      size: 1202
+      md5: 04bdf805b9c1e67769a48cbda5134cf3
+      size: 1200
