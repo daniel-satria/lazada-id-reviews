@@ -1,6 +1,8 @@
 # **LAZADA ID REVIEWS**
 
-![workflow status](https://github.com/daniel-satria/lazada-id-reviews/actions/workflows/main.yml/badge.svg)
+![workflow status](https://github.com/daniel-satria/lazada-id-reviews/actions/workflows/ci.yaml/badge.svg)
+![workflow status](https://github.com/daniel-satria/lazada-id-reviews/actions/workflows/cd-staging.yaml/badge.svg)
+![workflow status](https://github.com/daniel-satria/lazada-id-reviews/actions/workflows/cd-push-registry.yaml/badge.svg)
 
 Steps:
 + Select **Use this template** > **Create a new repository**. This menu is in the top right corner of this repository.
