@@ -10,6 +10,18 @@ services:
       - app-net
     env_file:
       - .env
+  
+  app-stg:
+    build: ./
+    container_name: app-stg
+    restart: unless-stopped
+    hostname: app-stg
+    ports:
+      - 8000:8000
+    networks:
+      - app-net
+    env_file:
+      - .env
 
 networks:
   app-net:
