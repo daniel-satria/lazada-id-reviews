@@ -1,4 +1,4 @@
-# Workflow ini akan melakukan build dan testing terhadap development app.
+# This workflow will build and test the development app.
 name: Development Testing
 
 on:
